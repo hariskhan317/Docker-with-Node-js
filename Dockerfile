@@ -1,5 +1,6 @@
 FROM node
-
+WORKDIR /app
 COPY ./ ./
-RUN "npm install"
-CMD [ "node" "server.js" ]
+RUN npm install
+EXPOSE 80
+CMD [ "node", "server.js" ]
